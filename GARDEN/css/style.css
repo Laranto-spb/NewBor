@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+.list-reset {
+  list-style: none;
+  padding: 0;
+}
+
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.garden-scheme {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background-image: url('../assets/Gargen-mobile.png');
+  overflow: hidden;
+  background-size: cover;
+  background-position-x: 60%;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+}
+
+.main-cell {
+  position: absolute;
+  top: 137px;
+  left: -58px;
+  transform: scale(0.4, 0.4);
+  cursor: pointer;
+}
+
+.storage-cell {
+  position: absolute;
+  top: -237px;
+  left: -163px;
+  transform: scale(0.16, 0.16);
+  cursor: pointer;
+}
+
+.storage-cell path {
+  opacity: 0.3;
+  fill: #2dc04d;
+  stroke: #000000;
+  stroke-width: 0.264583px;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-opacity: 1;
+}
+
+.main-cell path {
+  opacity: 0.3;
+  fill: #2dc04d;
+  stroke: #000000;
+  stroke-width: 0.264583px;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-opacity: 1;
+  transition: opacity 0.8s;
+}
+
+
+.main-cell path:hover {
+  opacity: 0.6;
+}
+
+
+
+
+.main-info,
+.storage-info {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  padding: 5px;
+  background-color: rgba(45, 192, 77, 0.6);
+  border-radius: 12px;
+}
+
+.main-info.active,
+.storage-info.active {
+  display: block;
+}
+
+.main-info__title {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.main-info__list {
+  font-size: 1em;
+}
